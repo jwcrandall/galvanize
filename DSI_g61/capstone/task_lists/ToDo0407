@@ -1,0 +1,29 @@
+1. Test filter_nodes_by_degree
+
+'''
+components = [p.nodes() for p in nx.connected_component_subgraphs(ego)
+              if nx.number_of_edges(p) >= nd]
+'''
+or
+'''
+fedges = filter(lambda x: G.degree()[x[0]] > k and G.degree()[x[1]] > k, G.edges())
+'''
+or
+
+2. Jupyter notebook test filter functions
+3. Jupyter notebook Nulls
+- "ISSUES OF:"
+or
+'''
+valid_names = nodes[nodes["name"].notnull()]["name"].to_dict()
+f = nx.relabel_nodes(f, nodes[nodes.name.notnull()].name)
+'''
+
+- line 92: nodes = nodes.fillna('Unknown')
+
+3. split subgraph based on partition
+
+4. Dendrograms & HC
+
+5. Classes
+6. EDA

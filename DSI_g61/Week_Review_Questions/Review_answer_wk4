@@ -1,0 +1,7 @@
+1. An objective function is any function for which we wish to find the minimum
+or maximum.
+
+example of max: Maximize the log-likelihood of data
+example of min: Minimize the "loss function" or "error function"
+
+Describe the three types of gradient descent and discuss advantages and disadvantages of each. What are the main hyperparameters to tune in gradient descent?

@@ -1,0 +1,37 @@
+Task List:
+March 30, 2018
+Day 3
+
+=====================================
+Overall Plan:
+- (1 day) Clean Data
+- (1 day) Produce Graph
+- (3 days) Analyze Network
+- (2 days) Visualization ****
+- (2 days) Background research  (i.e. Who are these people?)
+=====================================
+
+1) Yesterday: Visualization
+-  Produce graph of Saudi Arabia, Saudi Arabia + Jordan network
+-  Functionalize code: clean, import, subgraph, graph
+  BLOCKS:
+    - memory issue,
+    - breaks in code,
+    - mutability error due to updated NetworkX
+
+2) Today: Analyze Network (NetworkX package)
+  - Improve visualization...Nulls? Missing attributes?
+  - build unique entity type color function
+  - build Modularity function
+  - build Page Rank function
+  - build Degree function
+  - build Eignevectors function
+
+3) Tomorrow:
+  - Improve Visualization for the following:
+    > betweenness
+    > Degree
+    > Page PageRank
+    > Eigenvectors
+  - build bridge function
+  - zoom in on top Communities

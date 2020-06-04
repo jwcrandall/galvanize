@@ -1,0 +1,21 @@
+Task List:
+April 5, 2018
+
+1) Yesterday: Edge Analysis
+- dgre_connectivity_dict (DONE)
+- filter_nodess_by_degree (broken attr)
+- mean_of_dgrs (DONE)--> 13.
+- node_attr (DONE)
+- pd to md  (DONE)
+- Talked with Ken: USE CASE SCENARIO
+
+2) Today:
+- k_means - EXPLORE! (DONE)
+- fix 'filter_nodess_by_degree' ()
+- Split sub graphs into separate sub-sub graphs by modularity ()
+- README need to be updated with results! (kind of...)
+
+3) Tomorrow:
+- Build class
+- "Who to go to if you want to smuggle money"
+- visualization

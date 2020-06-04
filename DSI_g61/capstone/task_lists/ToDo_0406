@@ -1,0 +1,26 @@
+SCRUM Task List:
+April 6, 2018
+
+Days left: 5
+
+1) Yesterday:
+- k_means - EXPLORE! (DONE)
+- changed 'nulls' to 'Unknown' (DONE)
+- fix 'filter_nodess_by_degree' (NA)
+- Split sub graphs into separate sub-sub graphs by modularity (NA)
+
+3) Today:
+
+- Narrative building: "Who to go to if you want to smuggle money"
+- dendrograms interpretation
+- README need to be updated with results! (kind of...)
+  > tables of centralities
+  > distribution of centralities in network
+  > table of average degree (Entity, Intermediary, Officers)
+  > histogram of average degree (Entity, Intermediary, Officers)
+  > graph of ego
+  > graph of split ego
+
+4) Tomorrow:
+- Build class
+-

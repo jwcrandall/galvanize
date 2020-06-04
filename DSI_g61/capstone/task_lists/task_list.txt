@@ -1,0 +1,18 @@
+MVP: Social network analysis of the Panama Papers, with a specific interest in Saudi Arabia and Jordan.
+
+To Do’s:
+- (1 day) Clean Data
+- (1 day) Produce Graph
+- (3 days) Analyze Network
+- (2 days) Visualization
+- (2 days) Background research  (i.e. Who are these people?)
+
+
+Analysis Methods:
+* Clustering Coefficient: the fraction of possible triangles in an egocentric network that contain the ego node and exit. It measures the         undefined for directed graphs
+* Bridges: high betweenness  individuals  are  often  critical  to  collaboration
+  across different groups.
+* Modularity: measure aims to identify the nodes that are more densely connected together than to the rest of the network, describing the network structure, i.e., how the network is compartmentalized into sub-networks
+* Closeness and harmonic closeness centrality
+* Eigenvector centrality
+* PageRank

@@ -1,0 +1,42 @@
+Task List
+March 29
+
+Overall Plan:
+- (1 day) Clean Data
+- (1 day) Produce Graph
+- (3 days) Analyze Network
+- (2 days) Visualization
+- (2 days) Background research  (i.e. Who are these people?)
+
+Yesterday: Clean data
+- Read the edge list and convert it to network
+- Read node lists
+- Combine the node lists into one dataframe
+- Do some cleanup of names
+- Ensure that all "Bearers" do not become a single node
+- We only want to look at Saudi Arabia and, maybe, Jordan
+- Created subgroup for SA and JOR and relabel them.
+
+Today: visualization
+- Gephi
+- NetworkX
+- Force Atlas 2 (is it better?)
+- (maybe) Modularity + analysis of results
+
+Tomorrow:
+- Modularity to identify communities
+Make figures for...
+- Centrality measurements
+- Page Rank
+- Degree
+- Eignevectors
+
+Journal:
+- Went down rabbit-whole making functions that analysis network
+- having issue with gephi's memory
+- may want to rewrite code to be more functional so it will stop breaking and, thus,
+improve work flow.
+- May need to think about normalizing my edges...not sure
+- May need to do more EDA at some point.
+- Functionalize code: clean, import, graph, and Methods
+- Create function for all unique company types

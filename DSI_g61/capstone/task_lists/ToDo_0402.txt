@@ -1,0 +1,32 @@
+Task List:
+April 2, 2018
+Day 4
+
+=====================================
+Overall Plan:
+- (1 day) Clean Data: X
+- (1 day) Produce Graph: X
+- (3 days) Analyze Network
+- (2 days) Visualization ****
+- (2 days) Background research  (i.e. Who are these people?)
+=====================================
+
+1) Yesterday:
+- Worked on metric functions
+- build unique entity type color function
+- improved visualization
+
+2) Today:
+- Nulls?
+- Label of 'names': Who are these people??
+- build Modularity function
+- build Page Rank function
+- build Degree function
+- build Eigenvectors function
+- Calculated the correlations for each pair of centralities
+- Estimate Network Uniformity Through Assortativity
+
+3) Tomorrow:
+- build bridge function
+- zoom in on top Communities
+- work on README.txt
