@@ -1,0 +1,5 @@
+\select@language {ngerman}
+\beamer@sectionintoc {1}{A/B frameworks}{3}{0}{1}
+\beamer@sectionintoc {2}{Priors}{8}{0}{2}
+\beamer@sectionintoc {3}{Multiarmed bandit}{17}{0}{3}
+\beamer@sectionintoc {4}{Bayesian Bandits}{29}{0}{4}

@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{matplotlib}{4}{0}{1}
+\beamer@sectionintoc {2}{plotting}{8}{0}{2}
+\beamer@sectionintoc {3}{customizing}{14}{0}{3}
+\beamer@sectionintoc {4}{higher-level}{17}{0}{4}
+\beamer@sectionintoc {5}{references}{20}{0}{5}

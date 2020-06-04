@@ -1,0 +1,26 @@
+\begin{thebibliography}{}
+
+\bibitem[Bishop, 2006]{Bishop06}
+Bishop, C.~M. (2006).
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Springer.
+
+\bibitem[Hastie et~al., 2009]{Hastie09}
+Hastie, T., Tibshirani, R., and Friedman, J. (2009).
+\newblock {\em The elements of statistical learning: data mining, inference and
+  prediction}.
+\newblock Springer, 2 edition.
+
+\bibitem[Hui and Hastie, 2005]{Zou05}
+Hui, Z. and Hastie, T. (2005).
+\newblock Regularization and variable selection via the elastic net.
+\newblock {\em Journal of the Royal Statistical Society, Series B},
+  67:301--320.
+
+\bibitem[James et~al., 2014]{James14}
+James, G., Witten, D., Hastie, T., and Tibshirani, R. (2014).
+\newblock {\em An Introduction to Statistical Learning: With Applications in
+  R}.
+\newblock Springer Publishing Company, Incorporated.
+
+\end{thebibliography}

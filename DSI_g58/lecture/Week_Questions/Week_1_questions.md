@@ -1,0 +1,71 @@
+## Week 1 Review Questions
+
+1. Compare and contrast functional and object oriented programming paradigms.  Then discuss the the 3 pillars of OOP and how they relate to Python.
+
+2. What are some distinguishing characteristics of the Python programming
+language?  
+
+3. What are some differences between Python 2 and Python 3?  Why was Python 3
+developed?
+
+4. List major data structures in Python.  Which data structure(s) would you use to
+in each of the following situations, and why:
+
+  * Unchanging sales records
+
+  * A customer database where changing information, such as address, email,
+  and purchases are associated with a given customer name.
+
+  * Driving waypoint locations between arbitrary points A and B.
+
+  * The unique words used in a text corpus.
+
+  * A search engine that returns results quickly for a given search term.
+
+5. Write a one line list comprehension to perform the following matrix
+multiplication (A dot product B).  Describe how it works. How would you check
+it with NumPy?
+```python
+    A = [ [ 2, 4], [ 1, 7], [-1, 8] ]
+
+    B = [ [3, 2, -5, 6],  [1, -3, 4, 8] ]
+```
+
+6. Estimate the run-time complexity (O(N) notation) of the following code:
+  ```python
+  def find_duplicates(l1, l2):
+    '''
+    searches through lists 1 and 2 and eliminates duplicate entries from list 2
+    '''
+    for item1 in l1:
+      for item2 in l2:
+        if item2 == item1:
+          # removes item from list
+          l2.remove(item2)
+    return l1, l2          
+  ```
+  Write another function with the same functionality that works more efficiently. Use timeit to see how well you can do!
+
+  (Hint: you could use something like
+  ```np.random.randint(0, 100, 50)```
+  to create random lists to practice with)
+
+7. Use datatable 'customers' (example rows below), write a SQL query to....
+
+| cust_id | cust_name | current_city | hometown |
+|:----------:|:------------:|:----------:|:-----------:|
+| 1 | Amanda | Atlanta | Raleigh |
+| 2 | Brittany | Denver | New York |
+| 3 | Charles | Paris | Raleigh |
+| 4 | David | San Diego | Los Angeles |
+| 5 | Elizabeth | Atlanta | London |
+| 6 | Greg | Denver | Atlanta |
+| 7 | Maria | Raleigh | New York |
+| 8 | Sarah | New York | Raleigh |
+| 9 | Thomas | Atlanta | Raleigh |
+
+  **Assume that everyone has moved**
+
+  A) Return the city with the highest population growth. (Highest net of people who currently live there minus people who used to live there)
+
+  B) Return pairs of "friends" (can be two columns or a tuple) that have both the same hometown and current city. Remove duplicates!

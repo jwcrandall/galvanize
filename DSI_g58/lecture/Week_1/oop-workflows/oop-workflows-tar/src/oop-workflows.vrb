@@ -1,0 +1,8 @@
+\frametitle{Design Patterns}
+\footnotesize
+\begin{center}
+  \includegraphics[scale=0.09]{mvc.png}
+\end{center}
+\begin{flushleft}
+\tiny \href{https://commons.wikimedia.org/wiki/File:MVC\_Diagram\_(Model-View-Controller).svg}{https://commons.wikimedia.org/wiki/File:MVC\_Diagram\_(Model-View-Controller).svg}
+\end{flushleft}

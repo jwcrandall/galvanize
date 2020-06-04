@@ -1,0 +1,6 @@
+\frametitle{Logistic Regression}
+
+\begin{code}
+import sklearn.linear_model as lm
+help(lm.LogisticRegression)
+\end{code}

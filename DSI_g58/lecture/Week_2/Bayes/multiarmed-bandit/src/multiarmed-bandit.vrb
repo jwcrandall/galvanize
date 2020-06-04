@@ -1,0 +1,15 @@
+\frametitle{Is $CTR_{A}$ better than $CTR_{B}$?}
+\begin{code}
+import numpy as np
+
+num_samples = 10000
+A = np.random.beta(1 + num_clicks_A,
+1 + num_views_A - num_clicks_A,
+size=num_samples)
+B = np.random.beta(1 + num_clicks_B,
+1 + num_views_B - num_clicks_B,
+size=num_samples)
+# Probability that A wins:
+print(np.sum(A > B) / float(num_samples))
+\end{code}
+
