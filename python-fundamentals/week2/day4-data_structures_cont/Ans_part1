@@ -1,0 +1,15 @@
+# Write a script that prompts the user to input numbers separated by commas.
+user_str = input("Please enter numbers separated by commas: ")
+# Your script will then take these inputted numbers and store them as a list of tuples,
+# two at a time.
+user_num = user_str.split(',')
+user_num = [int(element.strip()) for element in user_num]
+print(zip(user_num[::2], user_num[1::2]))
+
+# foo = dict()
+# bar = tuple(foo.items())
+
+# Finally, your script will print that list of tuples to the user.
+
+# If the user inputs an odd number of numbers,
+# then only make a list of the largest number of pairs of two that are possible.

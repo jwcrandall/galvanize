@@ -1,0 +1,17 @@
+from pandas import read_csv
+from numpy import std
+from numpy import mean
+from matplotlib import pyplot
+from math import sqrt
+# load results file
+results = read_csv('results.csv', header=None)
+values = results.values
+# collect cumulative stats
+std_errors = list()
+for i in range(1,len(values)+1):
+	data = values[0:i, 0]
+	stderr = std(data) / sqrt(len(data))
+	std_errors.append(stderr)
+# line plot of cumulative values
+pyplot.plot(std_errors)
+pyplot.show()

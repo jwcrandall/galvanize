@@ -1,0 +1,10 @@
+# Write a script that checks if a user inputted string ends
+#in an exclamation point. If it does, then print the string
+#in all capital letters. If it doesn't, print the string in
+#all lowercase letters.
+
+x1 = input("Enter your string: ")
+if x1[len(x1)-1] == "!":
+    print(x1.upper())
+else:
+    print(x1.lower())

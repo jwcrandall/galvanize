@@ -1,0 +1,30 @@
+my_str = "hello"
+print(list(my_str))
+my_list = [1,2,3, 'hello', 'list number 2']
+# print(my_list)
+# my_list.append('new_variable')
+my_list.extend([4,5,6])
+# print(my_list)
+print("Popped Value:", my_list.pop())
+num_list = [1,2,3,4,5,8,2,3,5]
+# num_list.reverse()
+num_list.sort()
+print(num_list)
+
+new = sorted(num_list, reverse = True) # how to reverse order  the list
+num_list[5:]
+my_list[3][0]
+for var in my_list:
+    if type(var) == str:
+    print var
+
+for i, var in list(enumerate(my_list)):
+    print (i,var)
+
+for var in my_list:
+    if type(var) == list:
+        if len(var) > 1:
+        print var[1]
+
+for i, var in list(enumerate(my_list))
+    print( i, var)

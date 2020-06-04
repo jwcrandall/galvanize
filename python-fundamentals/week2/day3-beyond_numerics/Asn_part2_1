@@ -1,0 +1,17 @@
+#Write a script that obtains the count of
+#a user inputted letter in a user inputted
+#string (Hint: Use raw_input() twice to get
+#both of the user inputs). Make sure to build
+# this in such a way that it ignores the case
+# of the inputted string and letter.
+
+x1 = input("Enter a 1st string: ")
+x2 = input("Enter a the letter you want to count: ")
+n = 0
+
+for i in range(0,len(x1)-1):
+    if x1[i] == x2:
+        n += 1
+
+greeting = 'There are {} of the letter {} within the string {}'.format(n,x2,x1)
+print(greeting)

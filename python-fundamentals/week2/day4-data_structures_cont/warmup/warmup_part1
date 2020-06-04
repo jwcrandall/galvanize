@@ -1,0 +1,9 @@
+my_tup = ('diamond', 'club', 'spade', 'heart')
+print my_tup[::2]
+
+my_dct = {'Texas': 'Austin', 'Indiana': 'Indianapolis', 'Illinois': 'Chicago', 'New York': 'New York City'}
+for state, capital in states_caps_dict.items():
+    print(state, capital)
+
+for element in my_dct[::2]:
+    print(element)
