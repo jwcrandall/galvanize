@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting started &mdash; Neural Nets with Tensorflow 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="02-introduction.html" />
+    <link rel="prev" title="Course Overview" href="00-overview.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Neural Nets with Tensorflow
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00-overview.html">Course Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tensorflow">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#moving-files-in-out-of-your-volume">Moving files in/out of your volume</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02-introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-part-1.html">Part 1: Basic Nets (MLPs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-part-2.html">Part 2: Image Processing (CNNs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-part-3.html">Part 3: Language Processing (RNNs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-part-4.html">Part 4: Autoencoders</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Neural Nets with Tensorflow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/01-getting-started.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>With only a couple days to spend on this rich, challenging material, it would be a shame to waste time troubleshooting IT and program installation issues.  For this reason we recommend installing Docker, and then installing the Linux Tensorflow Docker image.  See the steps below for this straightforward installation process.</p>
+<div class="section" id="docker">
+<h3>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" href="_downloads/dlw_docker.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Docker</span> <span class="pre">slides.</span></code></a></p>
+<p>Installation directions for your operating system:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/">Ubuntu</a></li>
+<li><a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">MacOs</a></li>
+<li><a class="reference external" href="https://docs.docker.com/toolbox/overview/#whats-in-the-box">Windows - Docker Toolbox for Windows</a></li>
+</ul>
+</div>
+<div class="section" id="tensorflow">
+<h3>Tensorflow<a class="headerlink" href="#tensorflow" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" href="_downloads/dlw_tensorflow_intro.pdf" download=""><code class="xref download docutils literal notranslate"><span class="pre">Tensorflow</span> <span class="pre">introduction</span> <span class="pre">slides.</span></code></a></p>
+<p>We’ll all be installing the same docker image that also mounts a data storage volume:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker run -it --name tf_container --mount source=tf_volume,target=/notebooks -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-py3
+</pre></div>
+</div>
+<p>If you have follow-up questions see the directions <a class="reference external" href="https://www.tensorflow.org/install/install_linux#InstallingDocker">here.</a></p>
+<p>The workshop uses data and examples that should train quickly enough without a GPU.  Even if you have a GPU please use the image above.</p>
+</div>
+<div class="section" id="moving-files-in-out-of-your-volume">
+<h3>Moving files in/out of your volume<a class="headerlink" href="#moving-files-in-out-of-your-volume" title="Permalink to this headline">¶</a></h3>
+<p>Workshop notebooks and data will be added as the course proceeds. You can copy needed files into your docker volume using the <cite>docker cp</cite> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker cp &lt;file&gt; tf_container:/notebooks
+</pre></div>
+</div>
+<p>To copy files that are in the volume to a desired directory, navigate to that directory and reverse the order of the arguments above.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="02-introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="00-overview.html" class="btn btn-neutral" title="Course Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Galvanize DS.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

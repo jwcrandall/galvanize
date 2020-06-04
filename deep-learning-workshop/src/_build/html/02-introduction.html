@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Neural Nets with Tensorflow 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Part 1: Basic Nets (MLPs)" href="03-part-1.html" />
+    <link rel="prev" title="Getting started" href="01-getting-started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Neural Nets with Tensorflow
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="00-overview.html">Course Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01-getting-started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-brief-history-of-neural-networks">A brief history of Neural Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tensorflow">Tensorflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03-part-1.html">Part 1: Basic Nets (MLPs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-part-2.html">Part 2: Image Processing (CNNs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-part-3.html">Part 3: Language Processing (RNNs)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-part-4.html">Part 4: Autoencoders</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Neural Nets with Tensorflow</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/02-introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-brief-history-of-neural-networks">
+<h2>A brief history of Neural Networks<a class="headerlink" href="#a-brief-history-of-neural-networks" title="Permalink to this headline">¶</a></h2>
+<p>The idea of Artificial Neural Networks (ANNs) was introduced by Warren McCulloch and Walter Pitts in 1943 in their paper <a class="reference external" href="https://goo.gl/Ul4mxW">A Logical Calculus of Ideas Immanent in Nervous Activity.</a>  This paper introduced the concept of a neuron as a computational unit whose output was an all-or-nothing response to input from upstream neurons. With the analogy that the quality of the connection between two neurons could be quantified as weights, they showed a neuron with correct weights could output results associated with simple logic gates (OR/NOT/AND).  However, they did not present a way for the neuron to learn the weights from exemplary data.</p>
+<p>In 1949, Donald Hebb wrote <a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-642-70911-1_15">The Organization of Behavior.</a>  He made the point that neural pathways strengthen as they are used, and this is instrumental in how people learn.  He didn’t propose a mathematical model for how this might happen, though Hebb’s ‘rule’ inspired later work:</p>
+<blockquote>
+<div><em>When an axon of cell A is near enough to excite a cell B and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that A’s efficiency, as one of the cells firing B, is increased.</em></div></blockquote>
+<p>In 1957 Frank Rosenblatt invented the Perceptron. The Perceptron had two major improvements over prior implementations of artificial neurons.  First, it had an adjustable threshold (a bias) for neuron activation.  Second, he proposed a mathematical formulation of Hebbs rule that allowed weights governing the connection between neurons to change, and thereby “learn” from training data.  Dr. Rosenblatt was optimistic of the perceptron’s promise:</p>
+<blockquote>
+<div><em>The Navy revealed the embryo of an electronic computer today that it expects will be able to walk, talk, see, write, reproduce itself an be conscious of its existence … Dr. Frank Rosenblatt, a research psychologist at the Cornell Aeronautical Laboratory, Buffalo, said Perceptrons might be fired to the planets as mechanical space explorers</em> (<a class="reference external" href="http://www.nytimes.com/1958/07/08/archives/new-navy-device-learns-by-doing-psychologist-shows-embryo-of.html">Source</a>)</div></blockquote>
+<p>In the 1960s <a class="reference external" href="https://www.youtube.com/watch?v=aygSMgK3BEM">considerable hype</a> was building around artificial intelligence and neural networks in particlar. But Marvin Minsky and Seymour Papert of the MIT AI Lab were skeptical and published a rigorous analysis on of the limitations of Perceptrons in a book named <a class="reference external" href="https://en.wikipedia.org/wiki/Perceptrons_(book)">Perceptrons.</a>   In this book they showed that a Perceptron could not learn the non-linear separation ability necessary to predict the simple exclusive OR function (XOR) and therefore was fundamentally limited.  Though they mentioned that a network comprised of multiple layers of perceptrons could do this, there was no way to learn the weights in multi-layer networks at that time. This publication and other factors preceded the first <a class="reference external" href="https://en.wikipedia.org/wiki/AI_winter">A.I. Winter.</a></p>
+<p>Work in the ’70s and ’80s helped lead to a thaw.  Recognizing that multiple layers of perceptrons (the multilayer perceptron, MLP) were needed to model complex non-linear behavior, research investigated ways to <strong>backpropogate</strong> the error back to layers deeper in the network so that those weights could be updated to help learn the function of interest.  Backpropogation - the recursive application of the chain rule to calculate the gradient of the error with respect to the weights of interest so that gradient descent could be used to update those weights in a neural network - was first proposed in the U.S. by Paul Werbos in his <a class="reference external" href="https://www.bibsonomy.org/bibtex/2b0644d7aa84be0df0f198d586d341843/schaul">1974 PhD Thesis.</a> However, it wasn’t until 1986 when this approach was revisted by David Rumelhart, Geoffrey Hinton, and Ronald Williams in <a class="reference external" href="https://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf">Learning representations by back-propogating errors</a> that interest was significantly renewed.  Multilayer perceptrons are a general purpose machine learning model and have been used to model such diverse topics as human driving <a class="reference external" href="http://repository.cmu.edu/cgi/viewcontent.cgi?article=2874&amp;context=compsci">(ALVINN)</a>, <a class="reference external" href="https://pdfs.semanticscholar.org/82c8/e5d0cd4a7467f7f54ad823b2136b973eeb6e.pdf">time series prediction</a>, and <a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=5E92CE80772BE2E3F5E26AD0597BBEC9?doi=10.1.1.103.4626&amp;rep=rep1&amp;type=pdf">language modeling.</a></p>
+<p>Rumelhart et. al. published another paper in 1986, <a class="reference external" href="http://www.cs.toronto.edu/~fritz/absps/pdp8.pdf">Learning Internal Representations by Error Propogation,</a> that described a special type of multilayer perceptron network, the autoencoder. Autoencoders look for a way to encode information present in a higher dimensional space into a lower dimensional space, and then reconstruct information back into the higher dimensional space.   Autoencoders have obvious applications in dimensionaility reduction and compression, but can be used for <a class="reference external" href="https://arxiv.org/pdf/1608.04667.pdf">denoising images</a> and <a class="reference external" href="https://www.cc.gatech.edu/~hays/7476/projects/Avery_Wenchen/">reconstructing faces.</a></p>
+<p>In 1989 Yann Lecunn and others at Bell Labs showed that another form of neural network, a convolutional neural network (CNN), could <a class="reference external" href="http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf">read zip codes.</a>  There were several remarkable take-aways from their paper.  They didn’t do any feature engineering to the images before presenting them as input to the network.  Their model architecture was inspired by work in visual pattern recognition that placed importance on the local relationship of features in the visual field and hierarchical relationships formed by combining simple features into more complex features in progressive levels.  In CNNs, local features extract simple information in preliminary layers, but complex information deeper into the network.  Local information is extracted using small visual filters (convolutional kernels) that scan across the images/maps, where the values in the kernels are learned by backpropogation and gradient descent.  One of the most famous CNNs is Visual Geometry Group’s <a class="reference external" href="https://arxiv.org/pdf/1409.1556.pdf">VGG16</a> entry into the ImageNet ILSVRC-2014 competition which one first and second place in the localization and classification tasks.</p>
+<p>The network architectures discussed above are feed forward neural networks, meaning that information moves only one direction: from input to prediction (input layer -&gt; hidden layers -&gt; output layer) in a directed, acyclic (no loops) graph.  In a recurrent neural network (RNN), layers can send information back to previous layers in a cycle.  The reason for this is to allow inputs that have come before to influence the state of the network, and use this state to predict different things for a given input. For instance, in the case of speech prediction the words “Morning” and “Night” might both come after the word “Good,” but prior context from the conversation could be used to narrow down the possibility of one or the other.  John Hopfield presented <a class="reference external" href="https://en.wikipedia.org/wiki/Hopfield_network">Hopfield Networks</a> in 1982, and recurrent neural nets are discussed by Michael Jordan in <a class="reference external" href="http://cseweb.ucsd.edu/~gary/PAPER-SUGGESTIONS/Jordan-TR-8604.pdf">Serial Order, A Parallel Distributed Processing Approach</a>  in 1986.  In 1993 Yoshua Bengio wrote about the difficulty associated with training recurrent neural networks in <a class="reference external" href="http://www.iro.umontreal.ca/~lisa/publications2/index.php/attachments/single/161">A Connectionist Approach to Speech Recognition.</a>  He stated that RNNs were able to recall short-term dependencies (e.g., remembering a few words back) but struggled with longer term dependencies (e.g. a sentence back).  The culprit, as stated by Sepp Hochreiter in his PhD Thesis in 1991 and restated in English in <a class="reference external" href="http://www.bioinf.jku.at/publications/older/2304.pdf">this article</a>  was vanishing and exploding gradients.  RNNs tend to be deep as the network is unrolled for each entry in the sequence, and the gradients calculated from backpropogation tend to either vanish or explode which prevent the RNN from converging.  Hochreiter and Schmidhuber (his PhD advisor) authored a solution in 1997: <a class="reference external" href="http://www.bioinf.jku.at/publications/older/2604.pdf">Long Short-Term Memory.</a>  They proposed clipping the gradient and introducing constant error flow as solutions to the exploding/vanishing gradient problems.  Around 2007 LSTMs started to revolutionize speech recognition and have broken records for machine translation and language modeling since.</p>
+<p>These four architectures - MLP, Autoencoder, CNN, and RNN - are presented in this short course.  Other neural network architectures exist, and there are many variants of even these four architectures.</p>
+<p>Professor Geoff Hinton, in this <a class="reference external" href="https://www.youtube.com/watch?time_continue=1329&amp;v=bk7fM_EjKHo">lecture captured in 2016</a> summarized what has held back neural networks in the numerous A.I. winters throughout the years. Here is his list:</p>
+<ol class="arabic simple">
+<li>Our labeled data sets were thousands of times too small.</li>
+<li>Our computers were millions of times too slow.</li>
+<li>We initialized the weights in a stupid way.</li>
+<li>We used the wrong type of non-linearity.</li>
+</ol>
+<p>Points 3 and 4 will become clearer as you proceed with this course.</p>
+<p>Andrey Kurenkov’s <a class="reference external" href="http://www.andreykurenkov.com/writing/a-brief-history-of-neural-nets-and-deep-learning/">‘Brief’ History of Neural Nets and Deep Learning</a> was a valuable resource during for the preparation of this summary, as was Wikipedia.</p>
+</div>
+<div class="section" id="tensorflow">
+<h2>Tensorflow<a class="headerlink" href="#tensorflow" title="Permalink to this headline">¶</a></h2>
+<p>From <a class="reference external" href="https://www.tensorflow.org/">Tensorflow’s website:</a></p>
+<blockquote>
+<div>TensorFlow is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API. TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within Google’s Machine Intelligence research organization for the purposes of conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.</div></blockquote>
+<p>Tensorflow was open-sourced in November 2015 and has a growing development community (<a class="reference external" href="https://www.tensorflow.org">https://www.tensorflow.org</a>, <a class="reference external" href="https://github.com/jtoy/awesome-tensorflow">https://github.com/jtoy/awesome-tensorflow</a>). It has a Python API but converts operations to optimized C++ code (it also has a C++ API). Other high-level APIs have been built on top of Tensorflow, such as <a class="reference external" href="https://keras.io/">Keras.</a> It provides parameter optimization routines to minimize cost functions, and it automatically computes the gradients of functions you define using automatic differentiating (<em>autodiff</em>).  It comes with <a class="reference external" href="https://www.tensorflow.org/get_started/summaries_and_tensorboard">Tensorboard</a> - a visualization tool that lets you inspect the computation graph and the training process.  And though Tensorflow is relatively young, trends on Stackoverflow show that its use (as measured by number of queries) is <a class="reference external" href="https://insights.stackoverflow.com/trends?tags=tensorflow%2Ccaffe">growing.</a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="03-part-1.html" class="btn btn-neutral float-right" title="Part 1: Basic Nets (MLPs)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01-getting-started.html" class="btn btn-neutral" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Galvanize DS.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
